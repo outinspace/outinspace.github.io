@@ -1,0 +1,21 @@
+#+HUGO_BASE_DIR: .
+
+* Home
+:PROPERTIES:
+:EXPORT_HUGO_SECTION:
+:EXPORT_FILE_NAME: _index
+:EXPORT_HUGO_MENU: :menu "main"
+:END:
+This is the home
+
+* Post 1
+:PROPERTIES:
+:EXPORT_HUGO_SECTION: posts
+:EXPORT_FILE_NAME: post_1
+:END:
+This is my first post
+* Another post :atag:
+:PROPERTIES:
+:EXPORT_HUGO_SECTION: posts
+:EXPORT_FILE_NAME: post_2
+:END:
