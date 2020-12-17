@@ -11,6 +11,10 @@
   </url>
   
   <url>
+    <loc>https://outin.space/categories/</loc>
+  </url>
+  
+  <url>
     <loc>https://outin.space/</loc>
   </url>
   
@@ -24,6 +28,10 @@
   
   <url>
     <loc>https://outin.space/tags/</loc>
+  </url>
+  
+  <url>
+    <loc>https://outin.space/categories/theology/</loc>
   </url>
   
 </urlset>
