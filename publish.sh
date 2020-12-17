@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-hugo && git subtree push --prefix public origin gh-pages
+hugo && git push origin `git subtree split --prefix public master`:gh-pages --force
