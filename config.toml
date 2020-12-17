@@ -1,72 +1,156 @@
-baseURL = "https://outin.space/"
+baseURL = "https://outin.space"
+
+title = "Nicholas Wilson"
 languageCode = "en-us"
-title = "Nick Wilson"
-# theme="archie"
-theme = "ezhil"
-copyright =  "Copyright Nicholas Wilson"
-paginate=10
-summaryLength = 20
+defaultContentLanguage = "en"
+
+theme = "axiom"
+
+paginate = 2
+canonifyURLs = false
+summaryLength = 40
+rssLimit = 100
+enableEmoji = true
+enableRobotsTXT = true
+pluralizelisttitles = false
+
+[permalinks]
+posts = "/:filename"
 
 [params]
-    # Blog subtitle which appears below blog title. Supports markdown.
-    subtitle = "out in space"
+mainSections = ["posts"]
+copyrightYear = 2020
+# Go Reference time: Mon Jan 2 15:04:05 MST 2006
+dateFormat = "Jan 2, 2006"
+highlight = "dark"
 
-    # Content types which are included in home page recent posts list.
-    mainSections = ["posts"]
+[params.brand]
+domain = "outin.space"
+# email = "info@example.com"
 
-    # Content types which are excludes Disqus comments.
-    disableDisqusTypes = ["page"]
+[params.social]
+# facebook = "https://www.facebook.com/user_or_page"
+github = "https://github.com/outinspace"
+# instagram = "https://instagram.com/user"
+linkedin = "https://www.linkedin.com/in/outinspace"
+# pinterest = "https://www.pinterest.com/user"
+# stackoverflow = "https://stackoverflow.com/users/user"
+# twitter = "https://twitter.com/axiomtheme"
+# youtube = "https://www.youtube.com/user"
+footer = ["github", "linkedin"]
 
-    # If social media links are enabled then enable this to fetch icons from CDN instead of hosted on your site.
-    featherIconsCDN = true
+[params.services]
+# googleAnalyticsId = "UA-160259978-2"
+# googleTagManagerId = ""
+# googleAdsId = ""
+# googleAdsenseId = ""
+# googleAdsenseAdSlotId = ""
+# googleAdsenseLoad = ""
+# googleAdsConversionId = ""
+# googleAdsConversionValue = 0
+# facebookApp = ""
+# facebookPixel = ""
+# disqusShortname = ""
 
-    # Specify favicon (icons/i.png maps to static/icons/i.png). No favicon if not defined.
-    # favicon = "icons/myicon.png"
+[params.logo]
+# inline = true
+# path = "image/brand/logo.svg"
 
-    # Switch to dark mode or auto detect mode from OS (Optional).
-    # "dark" will set mode to dark and "auto" will switch to dark mode if OS is in dark mode.
-    mode = "light" # "dark" or "auto"
+[params.image]
+# width = "2048"
+# height = "1024"
+# faviconIco = "favicon.ico"
+# faviconAlt = "image/brand/favicon.png"
+# icon1To1 = "image/brand/icon-1-1.png"
+# icon2To1 = "image/brand/icon-2-1.png"
+# default = "image/page-default.webp"
 
-    # Custom CSS added to default styles. Files added to `static` folder is copied as it is to
-    # root by Hugo. For example if you have custom CSS file under `static/css/custom.css` then
-    # you can specify custom css path as `css/custom.css`.
-    # customCSS = "css/custom.css"
-    # Custom CSS added to dark mode style.
-    # customDarkCSS = "css/custom-dark.css"
+[params.font]
+type = ""
+path = ""
+files = []
 
-    # Custom list of Javascript files to load. Just like custom CSS you can place js files under
-    # `static/js` folder and specify path here as `js/script-name.js`. You can also specify full url,
-    # for example you may want to include external JS library.
-    # customJS = ["js/abc.js", "js/xyz.js", "https://code.jquery.com/jquery-3.4.1.js"]
+[params.cdn]
+provider = "local"
+type = "image"
 
-# Main menu which appears below site header.
+[params.cloudinary]
+# host = "https://res.cloudinary.com/CLOUD_NAME/"
+# version = ""
+# image = "image/upload/"
+# raw = "raw/upload/"
+# video = "video/upload/"
+
+[params.cloudinary.presets]
+# base = "f_auto,q_auto/"
+# page = "w_auto,dpr_auto,c_scale,f_auto,q_auto/"
+# feature = "w_auto,dpr_auto,c_scale,f_auto,q_auto/"
+# summary = "w_auto,dpr_auto,c_scale,f_auto,q_auto/"
+
+[outputs]
+home = ["HTML", "ATOM"]
+section = ["HTML"]
+taxonomy = ["HTML"]
+taxonomyTerm = ["HTML"]
+
+[outputFormats]
+[outputFormats.ATOM]
+name = "ATOM"
+baseName = "feed"
+mediaType = "application/atom+xml"
+
+[mediaTypes]
+[mediaTypes."application/atom+xml"]
+suffixes = ["atom"]
+
+[markup]
+[markup.goldmark]
+[markup.goldmark.extensions]
+definitionList = true
+footnote = true
+linkify = false
+strikethrough = false
+table = true
+taskList = false
+typographer = false
+[markup.goldmark.renderer]
+unsafe = true
+[markup.goldmark.parser]
+attribute = false
+[markup.highlight]
+codeFences = true
+noClasses = false
+tabWidth = 2
+# lineNos = true
+# lineNumbersInTable = false
+
+[menu]
 [[menu.main]]
-name = "Home"
-url = "/"
+url = "/posts/"
+name = "Posts"
 weight = 1
 
-[[menu.main]]
-name = "All posts"
-url = "/posts"
+[[menu.foot]]
+url = "/posts/"
+name = "Posts"
+weight = 1
+
+[[menu.foot]]
+url = "/about/"
+name = "About"
 weight = 2
 
-[[menu.main]]
-name = "About"
-url = "/about"
+[[menu.foot]]
+url = "/contact/"
+name = "Contact"
 weight = 3
 
-[[menu.main]]
-name = "Tags"
-url = "/tags"
+[[menu.foot]]
+url = "/privacy/"
+name = "Privacy"
 weight = 4
 
-# Social media links which shows up on site header.
-# Uses feather icons for icons. You can [search icon names from here](https://feathericons.com/).
-[[params.social]]
-name = "Github"
-icon = "github"
-url = "https://github.com/outinspace"
-
-# Enable tags.
-[taxonomies]
-   tag = "tags"
+[languages]
+[languages."en"]
+weight = 1
+languageName = "English"

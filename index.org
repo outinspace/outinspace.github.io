@@ -19,3 +19,4 @@ This is my first post
 :EXPORT_HUGO_SECTION: posts
 :EXPORT_FILE_NAME: post_2
 :END:
+yet another post
